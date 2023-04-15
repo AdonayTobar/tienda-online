@@ -1,4 +1,5 @@
 const menuEmail = document.querySelector('.navbar-email');
+const email = document.querySelector('.email');
 const menuHamIcon = document.querySelector('.menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
 const productDetailCloseIcon = document.querySelector('.product-detail-close')
@@ -11,6 +12,13 @@ const cerrarCarrito = document.querySelector(".title-container");
 const orden = document.querySelector(".my-order-content");
 const totalOrden = document.querySelector(".totalP");
 const counterOrden = document.querySelector(".counter");
+
+//recuperando el array de usuarios guardado en el localstorage
+const users = JSON.parse(localStorage.getItem('users'));
+//Recuperando el usuario
+const emailGuardado = localStorage.getItem('email');
+menuEmail.textContent = emailGuardado;
+email.textContent = emailGuardado;
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
